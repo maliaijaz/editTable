@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>editTable</title>
+    
+    </head>
+    <body>
+
+        <div id="edittable"></div> 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="jquery.edittable.min.js"></script>        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" href="jquery.edittable.min.css">
+
+
+<!-- <a href="#" class="sendjson button">Send JSON (check your console)</a> 
+<a href="#" class="loadjson button">Load JSON from textarea</a> 
+<a href="#" class="reset button">Reset Table</a> -->
+    </body>
+
+    <script>
+		var mytable = $('#edittable').editTable({
+			data: [
+				{ "firstName":"John" , "lastName":"Doe" }, 
+				{ "firstName":"Anna" , "lastName":"Smith" }, 
+				{ "firstName":"Peter" , "lastName":"Jones" }
+			],       // Fill the table with a js array (this is overridden by the textarea content if not empty)
+			jsonData: false,    // Fill the table with json data (this will override data property)
+			headerCols: false,  // Fix columns number and names (array of column names)
+			maxRows: 999        // Max number of rows which can be added
+		});
+
+		/*var data = {
+			"employees": 
+		}
+		mytable.loadJsonData(#data);*/
+	</script>
+</html>
